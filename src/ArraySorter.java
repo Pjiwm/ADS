@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class ArraySorter {
@@ -56,20 +55,4 @@ public class ArraySorter {
         return input;
     }
 
-    public static HashMap<Integer, Integer> bucketSort(int[] arr) {
-        HashMap<Integer, Integer> buckets = new HashMap<Integer, Integer>();
-
-        for(int x : arr) {
-            if(!buckets.containsKey(x)) {
-                buckets.put(x, 0);
-            }
-        }
-
-        for(int key : arr) {
-            int count = buckets.get(key);
-            buckets.put(key, count+1);
-        }
-
-        return buckets;
-    }
 }

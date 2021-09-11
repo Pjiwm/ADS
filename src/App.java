@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+import Polynoom.Polynomial;
+import Polynoom.PolynomialFactory;
+import Polynoom.Term;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -13,6 +17,9 @@ public class App {
         System.out.println(Recursive.reverseString("these nuts"));
         line("array sorting");
         printArr(ArraySorter.bubbleSort(array));
+
+        line("array Polynomial");
+        System.out.println(PolynomialFactory.addPolynomials());
 
     }
 
