@@ -20,9 +20,9 @@ public class App {
 
         line("array Polynomial");
         System.out.println(PolynomialFactory.addPolynomials());
-
+    
     }
-
+    
     public static void printArr(int[] arr) {
         System.out.println(Arrays.toString(arr));
     }
@@ -30,5 +30,6 @@ public class App {
     public static void line(String s) {
         System.out.println("\n******** " + s + " ********\n");
     }
+    
 
 }
