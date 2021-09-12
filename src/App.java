@@ -1,4 +1,4 @@
-import Polynoom.PolynomialFactory;
+import Polynomials.PolynomialFactory;
 
 
 public class App {
