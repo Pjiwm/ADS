@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class MagicBox {
     /**
      * Creates a 2D array grid and fills it with numbers. Each row (diagonal,
-     * vertical or horizontal) equals n^2 in total. The method starts at the top
+     * vertical or horizontal) added up to each other is the same number. The method starts at the top
      * middle and goes up by (1,1) each time and fills in the number starting from
      * one until the amount of boxes in the grid. When the next position on the grid
      * is above the X or Y axis on the grid. The new X and Y position will be X=0
@@ -44,10 +44,6 @@ public class MagicBox {
             counter++;
         }
 
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            str.append(Arrays.toString(table[i]) + "\n");
-        }
-        return str.toString();
+        return AppUtils.print2DArr(table);
     }
 }

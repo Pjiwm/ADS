@@ -19,6 +19,8 @@ public class App {
 
         AppUtils.line("array Polynomial");
         System.out.println(PolynomialFactory.addPolynomials());
-    
+        
+        AppUtils.line("Magic box");
+        System.out.println(MagicBox.generate(5));
     }
 }
