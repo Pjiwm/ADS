@@ -1,6 +1,5 @@
-import java.util.Arrays;
-
 import Polynoom.PolynomialFactory;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -9,27 +8,17 @@ public class App {
         int[] orderedArray = { 1, 4, 7, 11, 15, 20, 30, 44, 60, 90, 100, 104, 110 };
         int[] a = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
         int[] b = { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
-        line("recursive");
+        AppUtils.line("recursive");
         System.out.println(Recursive.maxrec(array));
         System.out.println(Recursive.binarySearch(orderedArray, 7));
         System.out.println(Recursive.reverseString("these nuts"));
         System.out.println(Recursive.palindromeSearch("Jij slaapt, ronkt, knort; ronkt, knort pa als jij?"));
         
-        line("array sorting");
-        printArr(ArraySorter.bubbleSort(array));
+        AppUtils.line("array sorting");
+        AppUtils.printArr(ArraySorter.bubbleSort(array));
 
-        line("array Polynomial");
+        AppUtils.line("array Polynomial");
         System.out.println(PolynomialFactory.addPolynomials());
     
     }
-    
-    public static void printArr(int[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
-
-    public static void line(String s) {
-        System.out.println("\n******** " + s + " ********\n");
-    }
-    
-
 }

@@ -13,7 +13,11 @@ public class Polynomial {
     public void add(Term term) {
         this.terms.add(term);
     }
-
+    /**
+     * 
+     * @param poly2 - the polynomial you add to this polynomial.
+     * @return - the sum of poly2 and this polynomial polynomial..
+     */
     public Polynomial som(Polynomial poly2) {
         Polynomial result = new Polynomial();
         List<Term> terms2 = poly2.terms;
