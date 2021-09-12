@@ -1,8 +1,6 @@
 import java.util.Arrays;
 
-import Polynoom.Polynomial;
 import Polynoom.PolynomialFactory;
-import Polynoom.Term;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -15,6 +13,8 @@ public class App {
         System.out.println(Recursive.maxrec(array));
         System.out.println(Recursive.binarySearch(orderedArray, 7));
         System.out.println(Recursive.reverseString("these nuts"));
+        System.out.println(Recursive.palindromeSearch("Jij slaapt, ronkt, knort; ronkt, knort pa als jij?"));
+        
         line("array sorting");
         printArr(ArraySorter.bubbleSort(array));
 

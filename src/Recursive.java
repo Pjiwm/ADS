@@ -65,4 +65,35 @@ public class Recursive {
         return highest - lowest;
     }
 
+    public static boolean palindromeSearch(String input) {
+ 
+        StringBuilder inputLetter = new StringBuilder();
+        for(int i = 0; i < input.length(); i++) {
+            if( Character.isLetter(input.charAt(i))) {
+                inputLetter.append(input.charAt(i));
+            }
+        }
+
+        String reversed = reverseLetters(input).toLowerCase();
+        if (inputLetter.toString().toLowerCase().equals(reversed)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private static String reverseLetters(String s) {
+    
+        if(!(s.length() > 0)) {
+            return "";
+        }
+
+        char lastSymbol = s.charAt(s.length() - 1);
+        if(Character.isLetter(lastSymbol)) {
+            return lastSymbol + reverseLetters(s.substring(0, s.length() -1));
+        } else {
+            return reverseLetters(s.substring(0, s.length() - 1));
+        }
+    }
+
 }
