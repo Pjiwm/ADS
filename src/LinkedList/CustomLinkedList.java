@@ -18,6 +18,15 @@ public class CustomLinkedList<E> {
                 this.next.addBack(_element);
             }
         }
+
+        public int count(int count) {
+
+            if (this.next == null) {
+                return count;
+            } else {
+                return this.next.count(count + 1);
+            }
+        }
     }
 
     private Entry head;
@@ -28,5 +37,13 @@ public class CustomLinkedList<E> {
         } else {
             head.addBack(element);
         }
+    }
+
+    public int count() {
+        if (head == null) {
+            return 0;
+        }
+
+        return head.count(0);
     }
 }
