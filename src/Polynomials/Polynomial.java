@@ -1,4 +1,4 @@
-package Polynoom;
+package Polynomials;
 
 import java.util.ArrayList;
 import java.util.List;

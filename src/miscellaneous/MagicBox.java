@@ -1,4 +1,6 @@
-import java.util.Arrays;
+package miscellaneous;
+
+import Utils.AppUtils;
 
 public class MagicBox {
     /**

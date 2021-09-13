@@ -1,4 +1,4 @@
-package IStack;
+package Stacks;
 
 public interface IStack {
     void push(int num);

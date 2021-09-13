@@ -1,4 +1,4 @@
-package IStack;
+package Stacks;
 import java.util.EmptyStackException;
 
 public class ArrayStack implements IStack {

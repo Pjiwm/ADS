@@ -1,4 +1,4 @@
-package Polynoom;
+package Polynomials;
 
 public class PolynomialFactory {
     

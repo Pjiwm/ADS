@@ -27,10 +27,11 @@ public class App {
         System.out.println(MagicBox.generate(5));
 
         AppUtils.line("Linked List");
-        CustomLinkedList<Integer> list = new CustomLinkedList<>();
+        CustomLinkedList<Integer> list = new CustomLinkedList<>();  
         list.addBack(1);
         list.addBack(6);
         list.addBack(4);
+        System.out.println(list.count());
 
         
     }

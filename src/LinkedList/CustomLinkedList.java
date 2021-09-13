@@ -22,7 +22,7 @@ public class CustomLinkedList<E> {
         public int count(int count) {
 
             if (this.next == null) {
-                return count;
+                return count+1;
             } else {
                 return this.next.count(count + 1);
             }
