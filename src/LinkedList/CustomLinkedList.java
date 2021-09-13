@@ -27,6 +27,15 @@ public class CustomLinkedList<E> {
                 return this.next.count(count + 1);
             }
         }
+
+        public void addFront(E element) {
+            Entry newEntry = new Entry(element);
+            if (head == null) {
+                head = newEntry; 
+            }
+            newEntry.next = head;
+            head = newEntry;
+        }
     }
 
     private Entry head;
