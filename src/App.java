@@ -31,8 +31,12 @@ public class App {
         list.addBack(1);
         list.addBack(6);
         list.addBack(4);
-        System.out.println(list.count());
+        list.addFront(4);
+        System.out.println(list.count());        
+        // complexiteit
+        // wat is reken complexiteit/geheugen
+        // vraag linked arraylist welke zou je doen: toelichting
+        // 1, 2 programmeer opdracht recursieve functie bv.
 
-        
     }
 }

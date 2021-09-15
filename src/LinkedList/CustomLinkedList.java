@@ -28,13 +28,21 @@ public class CustomLinkedList<E> {
             }
         }
 
-        public void addFront(E element) {
-            Entry newEntry = new Entry(element);
+        public void AddFront(E newElement, int count) {
+            // This caches the size of the array, so looking it up is only O(1)
+            count++;
+    
+            // Create the new entry that contains the new element
+            Entry newEntry = new Entry(newElement);
+    
             if (head == null) {
-                head = newEntry; 
+                // If there is no head (first entry) yet, we simply point the head to it
+                head = newEntry;
+            } else {
+                // Otherwise we hook the new entry in the chain at the front
+                newEntry.next = head;
+                head = newEntry;
             }
-            newEntry.next = head;
-            head = newEntry;
         }
     }
 
@@ -54,5 +62,9 @@ public class CustomLinkedList<E> {
         }
 
         return head.count(0);
+    }
+
+    public void addFront(E element) {
+        head.AddFront(element, 0);
     }
 }
