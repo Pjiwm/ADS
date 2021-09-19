@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 import LinkedList.CustomLinkedList;
 import Polynomials.PolynomialFactory;
 import Utils.AppUtils;
@@ -32,7 +34,9 @@ public class App {
         list.addBack(6);
         list.addBack(4);
         list.addFront(4);
-        System.out.println(list.count());        
+        System.out.println(list.count());    
+        LinkedList<String> linkList = new LinkedList<String>();
+        System.out.println(Recursive.multipleReverse("abcd"));    
         // complexiteit
         // wat is reken complexiteit/geheugen
         // vraag linked arraylist welke zou je doen: toelichting

@@ -157,4 +157,18 @@ public class Recursive {
             return reverseLetters(s.substring(0, s.length() - 1));
         }
     }
+
+    public static String multipleReverse(String s) {
+        StringBuilder lastChar = new StringBuilder();
+
+        if(s.length() > 0) {
+            for(int i = 0; i < s.length(); i++) {
+                lastChar.append(s.charAt(s.length() -1));
+            }
+
+            return lastChar.toString() + multipleReverse(s.substring(0, s.length() - 1)); 
+        }
+
+        return "";
+    }
 }
