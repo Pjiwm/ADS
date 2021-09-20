@@ -3,11 +3,20 @@ package animal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalShelter<T extends Animal>{
+public class AnimalShelter<T extends Animal> implements Cloneable {
     private List<T> animals;
 
     public AnimalShelter() {
         this.animals = new ArrayList<T>();
+    }
+
+    public AnimalShelter(AnimalShelter animals) {
+        List<T> newAnimals = new ArrayList<>();
+        for (Animal animal : this.animals) {
+            newAnimals.add((T) animal.clone());
+        }
+        
+        this.animals = newAnimals;
     }
 
     public void add(T animal) {
@@ -19,4 +28,11 @@ public class AnimalShelter<T extends Animal>{
             animal.makeSound();
         }
     }
+
+    @Override
+    public AnimalShelter clone() {
+
+        return new AnimalShelter(this);
+    }
+
 }
