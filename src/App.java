@@ -1,9 +1,12 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import LinkedList.CustomLinkedList;
 import Polynomials.PolynomialFactory;
 import Utils.AppUtils;
 import animal.Animal;
+import animal.AnimalShelter;
 import animal.Cat;
 import animal.Dog;
 import miscellaneous.ArraySorter;
@@ -42,10 +45,14 @@ public class App {
         System.out.println(Recursive.multipleReverse("abcd"));    
 
         AppUtils.line("Animals");
-        Animal pikkie = new Dog("pikkie");
+        Animal pikkie = new Dog("pikkie", 69);
         Animal poesje = new Cat("peosje");
         poesje.makeSound();
         pikkie.makeSound();
+        AnimalShelter<Animal> shelter = new AnimalShelter<>();
+        AnimalShelter<Dog> dogShelter = new AnimalShelter<>();
+        
+
         // complexiteit
         // wat is reken complexiteit/geheugen
         // vraag linked arraylist welke zou je doen: toelichting

@@ -3,7 +3,7 @@ package animal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalShelter<T extends Animal> implements Cloneable {
+public class AnimalShelter<T extends Animal> implements Cloneable, Comparable<T> {
     private List<T> animals;
 
     public AnimalShelter() {
@@ -15,7 +15,7 @@ public class AnimalShelter<T extends Animal> implements Cloneable {
         for (Animal animal : this.animals) {
             newAnimals.add((T) animal.clone());
         }
-        
+
         this.animals = newAnimals;
     }
 
@@ -33,6 +33,12 @@ public class AnimalShelter<T extends Animal> implements Cloneable {
     public AnimalShelter clone() {
 
         return new AnimalShelter(this);
+    }
+
+    @Override
+    public int compareTo(T o) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

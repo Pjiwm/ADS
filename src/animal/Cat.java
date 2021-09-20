@@ -7,6 +7,10 @@ public class Cat extends Animal {
         //TODO Auto-generated constructor stub
     }
 
+    public Cat(Cat cat) {
+        super(cat.name);   
+    }
+
     @Override
     protected String getSound() {
         // TODO Auto-generated method stub
@@ -15,6 +19,12 @@ public class Cat extends Animal {
 
     public void beStubborn() {
         // joe
+    }
+
+    @Override
+    public Object clone() {
+        // TODO Auto-generated method stub
+        return new Cat(this);
     }
 
     

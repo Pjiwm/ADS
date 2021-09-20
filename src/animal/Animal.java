@@ -1,6 +1,6 @@
 package animal;
 
-public abstract class Animal {
+public abstract class Animal implements Cloneable {
     protected String name;
 
     public Animal(String name) {
@@ -12,5 +12,7 @@ public abstract class Animal {
     }
 
     protected abstract String getSound();
+
+    abstract public Object clone();
     
 }
