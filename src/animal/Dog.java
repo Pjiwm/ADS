@@ -1,6 +1,6 @@
 package animal;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Comparable<Dog> {
     private int age;
 
     public Dog(String name, int age) {
@@ -27,5 +27,10 @@ public class Dog extends Animal {
     public Object clone() {
         // TODO Auto-generated method stub
         return new Dog(this);
+    }
+
+    @Override
+    public int compareTo(Dog o) {
+        return this.age - o.age; 
     }
 }
