@@ -6,7 +6,7 @@ public class Dog extends Animal implements Comparable<Dog> {
     public Dog(String name, int age) {
         super(name);
         this.age = age;
-        //TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub
     }
 
     public Dog(Dog dog) {
@@ -31,6 +31,9 @@ public class Dog extends Animal implements Comparable<Dog> {
 
     @Override
     public int compareTo(Dog o) {
-        return this.age - o.age; 
+        if (this.age - o.age == 0) {
+            return this.name.compareTo(o.name);
+        }
+        return this.age - o.age;
     }
 }
