@@ -56,6 +56,19 @@ public class Recursive {
         return "";
     }
 
+    public static String mirrorConcatinate(String s) {
+        return s + reverseString(s);
+    }
+
+    private static String mirrorString(String  s) {
+        if (s.length() > 0) {
+            char lastLetter = s.charAt(s.length() - 1);
+            return lastLetter + mirrorString(s.substring(0, s.length() - 1));
+        }
+
+        return "";
+    }
+
     /**
      * Gives the factorial sum of a given number.
      * 
