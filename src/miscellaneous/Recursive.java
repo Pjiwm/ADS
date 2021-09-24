@@ -60,15 +60,6 @@ public class Recursive {
         return s + reverseString(s);
     }
 
-    private static String mirrorString(String  s) {
-        if (s.length() > 0) {
-            char lastLetter = s.charAt(s.length() - 1);
-            return lastLetter + mirrorString(s.substring(0, s.length() - 1));
-        }
-
-        return "";
-    }
-
     /**
      * Gives the factorial sum of a given number.
      * 
@@ -183,5 +174,12 @@ public class Recursive {
         }
 
         return "";
+    }
+
+    public static int altSum(int n) {
+       if(n > 0) {
+           return n - altSum(n -1);
+       }
+       return 0;
     }
 }
