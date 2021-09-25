@@ -1,4 +1,5 @@
 package miscellaneous;
+
 public class Recursive {
 
     /**
@@ -165,21 +166,21 @@ public class Recursive {
     public static String multipleReverse(String s) {
         StringBuilder lastChar = new StringBuilder();
 
-        if(s.length() > 0) {
-            for(int i = 0; i < s.length(); i++) {
-                lastChar.append(s.charAt(s.length() -1));
+        if (s.length() > 0) {
+            for (int i = 0; i < s.length(); i++) {
+                lastChar.append(s.charAt(s.length() - 1));
             }
 
-            return lastChar.toString() + multipleReverse(s.substring(0, s.length() - 1)); 
+            return lastChar.toString() + multipleReverse(s.substring(0, s.length() - 1));
         }
 
         return "";
     }
 
     public static int altSum(int n) {
-       if(n > 0) {
-           return n - altSum(n -1);
-       }
-       return 0;
+        if (n > 0) {
+            return n - altSum(n - 1);
+        }
+        return 0;
     }
 }
