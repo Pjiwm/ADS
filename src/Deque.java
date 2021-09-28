@@ -1,16 +1,14 @@
 import java.util.LinkedList;
 
 public class Deque<T> {
-    private LinkedList queue;
+    private LinkedList<T> queue;
 
     public Deque() {
         this.queue = new LinkedList<T>();
     }
 
     public T dequeueFront() {
-        T front = (T) queue.getFirst();
-        queue.removeFirst();
-        return front;
+        return queue.removeFirst();
     }
 
     public void enqueuFront(T t) {
@@ -18,9 +16,7 @@ public class Deque<T> {
     }
 
     public T dequeuBack() {
-        T back = (T) queue.getLast();
-        queue.removeLast();
-        return back;
+       return queue.removeLast();
     }
 
     public void enqueuBack(T t) {
@@ -28,12 +24,11 @@ public class Deque<T> {
     }
 
     public T peekFront() {
-        return (T) queue.getFirst();
+        return queue.getFirst();
     }
 
     public T peekBack() {
-        return (T) queue.getLast();
-
+        return queue.getLast();
     }
 
     public boolean isEmpty() {
