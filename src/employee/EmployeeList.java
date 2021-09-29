@@ -5,7 +5,6 @@ import java.util.LinkedList;
 public class EmployeeList<T> extends LinkedList<Employee> implements Cloneable {
 
     public EmployeeList() {
-
     }
 
     public EmployeeList(EmployeeList<Employee> employeeList) {
@@ -14,6 +13,7 @@ public class EmployeeList<T> extends LinkedList<Employee> implements Cloneable {
             Employee newEmployee = new Employee(employee.getName(), employee.getSalary());
             clonedList.add(newEmployee);
         }
+        super.addAll(clonedList);
     }
 
 
