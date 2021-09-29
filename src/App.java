@@ -9,6 +9,7 @@ import linkedlist.CustomLinkedList;
 import miscellaneous.ArraySorter;
 import miscellaneous.MagicBox;
 import miscellaneous.Recursive;
+import priorityqueue.*;
 
 public class App {
     public static void main(String[] args) {
@@ -29,6 +30,17 @@ public class App {
         System.out.println(BracketDeLimiter.isBalanced("(())"));
         System.out.println(BracketDeLimiter.isBalanced("((())"));
         System.out.println(BracketDeLimiter.isBalanced("()))"));
+        AppUtils.line("Priority queue");
+        PriorityQueue queue = new PriorityQueue();
+        queue.add(new HTTPRequest(5, "request 1"));
+        queue.add(new HTTPRequest(8, "request 2"));
+        queue.add(new HTTPRequest(10, "request 3"));
+        queue.add(new HTTPRequest(8, "request 4"));
+        queue.add(new HTTPRequest(5, "request 5"));
+        System.out.println(queue.toString());
+
+
+
     
     }
 }
