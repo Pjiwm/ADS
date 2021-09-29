@@ -27,6 +27,7 @@ public class HTTPRequest implements Comparable<HTTPRequest> {
 
     @Override
     public int compareTo(HTTPRequest o) {
+        if(this.qos == o.qos) return -1;
         return this.qos - o.qos;
     }
 
