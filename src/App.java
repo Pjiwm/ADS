@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 
 import Polynomials.PolynomialFactory;
+import Stacks.BracketDeLimiter;
 import Utils.AppUtils;
 import animal.*;
 import employee.*;
@@ -24,10 +25,10 @@ public class App {
         EmployeeList<Employee> employeeListCopy = employeeList.clone();
         System.out.println(employeeListCopy.size());
         System.out.println(employeeListCopy.get(0).toString() + " " + employeeList.get(0).toString());
-
-
-        
-
-
+        AppUtils.line("BracketDeLimiter");
+        System.out.println(BracketDeLimiter.isBalanced("(())"));
+        System.out.println(BracketDeLimiter.isBalanced("((())"));
+        System.out.println(BracketDeLimiter.isBalanced("()))"));
+    
     }
 }
