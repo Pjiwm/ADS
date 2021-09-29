@@ -1,15 +1,9 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
-import LinkedList.CustomLinkedList;
 import Polynomials.PolynomialFactory;
 import Utils.AppUtils;
-import animal.Animal;
-import animal.AnimalShelter;
-import animal.Cat;
-import animal.Dog;
-import employee.Employee;
+import animal.*;
+import linkedlist.CustomLinkedList;
 import miscellaneous.ArraySorter;
 import miscellaneous.MagicBox;
 import miscellaneous.Recursive;
@@ -48,21 +42,11 @@ public class App {
 
         AppUtils.line("Animals");
         Animal pikkie = new Dog("pikkie", 69);
-        Animal poesje = new Cat("peosje");
+        Animal poesje = new Cat("poesje");
         poesje.makeSound();
         pikkie.makeSound();
         AnimalShelter<Animal> shelter = new AnimalShelter<>();
         AnimalShelter<Dog> dogShelter = new AnimalShelter<>();
-        LinkedList<Employee> employees = new LinkedList<>();
-        employees.add(new Employee("bob", 6000));
-        employees.add(new Employee("Joe", 2000));
-        employees.add(new Employee("Hank", 1600));
-        employees.add(new Employee("Bill", 10000));
-        LinkedList<Employee> employeeCopy = (LinkedList<Employee>) employees.clone();
-        System.out.println(employeeCopy.getFirst().toString() + employees.getFirst().toString());
-        
 
-
-        
     }
 }
