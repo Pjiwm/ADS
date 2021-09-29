@@ -37,6 +37,10 @@ public class App {
         queue.add(new HTTPRequest(10, "request 3"));
         queue.add(new HTTPRequest(8, "request 4"));
         queue.add(new HTTPRequest(5, "request 5"));
+        queue.add(new HTTPRequest(1, "request 6"));
+        queue.add(new HTTPRequest(9, "request 7"));
+        queue.add(new HTTPRequest(8, "request 8"));
+
         System.out.println(queue.toString());
 
 
