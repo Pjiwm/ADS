@@ -18,7 +18,7 @@ public class Polynomial {
      * @param poly2 - the polynomial you add to this polynomial.
      * @return - the sum of poly2 and this polynomial polynomial..
      */
-    public Polynomial som(Polynomial poly2) {
+    public Polynomial sum(Polynomial poly2) {
         Polynomial result = new Polynomial();
         List<Term> terms2 = poly2.terms;
         int j = 0;
