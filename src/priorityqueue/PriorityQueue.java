@@ -2,7 +2,7 @@ package priorityqueue;
 
 import java.util.LinkedList;
 
-public class PriorityQueue<T extends Comparable> {
+public class PriorityQueue<T extends HTTPRequest> {
     private LinkedList<T> list;
 
     public PriorityQueue() {
