@@ -42,9 +42,19 @@ public class App {
         queue.add(new HTTPRequest(8, "request 8"));
 
         System.out.println(queue.toString());
+        AppUtils.line("Tree");
+        BTreeNode<Integer> root = new BTreeNode<>(6);
+        root.insert(4);
+        root.insert(5);
+        root.insert(12);
+        root.insert(9);
+        root.insert(13);
+        root.insert(24); 
+        System.out.println(root.contains(4));
+        System.out.println(root.contains(13));
+        System.out.println(root.contains(4000));
 
 
 
-    
     }
 }
