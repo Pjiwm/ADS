@@ -32,7 +32,6 @@ public class App {
         System.out.println(BracketDeLimiter.isBalanced("()))"));
         AppUtils.line("Priority queue");
         PriorityQueue queue = new PriorityQueue();
-        queue.add(7);
         queue.add(new HTTPRequest(5, "request 1"));
         queue.add(new HTTPRequest(8, "request 2"));
         queue.add(new HTTPRequest(10, "request 3"));

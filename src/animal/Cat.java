@@ -4,7 +4,6 @@ public class Cat extends Animal {
 
     public Cat(String name) {
         super(name);
-        //TODO Auto-generated constructor stub
     }
 
     public Cat(Cat cat) {
@@ -13,7 +12,6 @@ public class Cat extends Animal {
 
     @Override
     protected String getSound() {
-        // TODO Auto-generated method stub
         return "bruh";
     }
 
@@ -23,7 +21,6 @@ public class Cat extends Animal {
 
     @Override
     public Object clone() {
-        // TODO Auto-generated method stub
         return new Cat(this);
     }
 

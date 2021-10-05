@@ -19,6 +19,6 @@ public class PolynomialFactory {
                 polynomial2.add(new Term(-5, -6));
                 polynomial2.add(new Term(-5, -7));
                 // Determine the sum
-                return polynomial1.som(polynomial2);
+                return polynomial1.sum(polynomial2);
     }
 }

@@ -37,7 +37,6 @@ public class AnimalShelter<T extends Animal> implements Cloneable, Comparable<T>
 
     @Override
     public int compareTo(T o) {
-        // TODO Auto-generated method stub
         return 0;
     }
 

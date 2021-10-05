@@ -6,7 +6,6 @@ public class Dog extends Animal implements Comparable<Dog> {
     public Dog(String name, int age) {
         super(name);
         this.age = age;
-        // TODO Auto-generated constructor stub
     }
 
     public Dog(Dog dog) {
@@ -15,7 +14,6 @@ public class Dog extends Animal implements Comparable<Dog> {
 
     @Override
     protected String getSound() {
-        // TODO Auto-generated method stub
         return "woof";
     }
 
@@ -25,7 +23,6 @@ public class Dog extends Animal implements Comparable<Dog> {
 
     @Override
     public Object clone() {
-        // TODO Auto-generated method stub
         return new Dog(this);
     }
 
