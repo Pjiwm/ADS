@@ -4,27 +4,29 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class NNode<T> {
-    private T father;
-    private T mother;
+    private T self;
+    private T partner;
     private List<NNode<T>> children;
 
-    public NNode(T father, T mother) {
-        this.father = father;
-        this.mother = mother;
+    public NNode(T self) {
+        this.self = self;
         this.children = new LinkedList<>();
     }
 
-    public void insert(LinkedList<NNode<T>> children) {
-        this.children = children;
+    public void addPartner(T partner) {
+        this.partner = partner;
     }
 
-
-    public T getFather() {
-        return this.father;
+    public void addKid(NNode<T> child) {
+        this.children.add(child);
     }
 
-    public T getMother() {
-        return this.mother;
+    public T getSelf() {
+        return this.self;
+    }
+
+    public T getPartner() {
+        return this.partner;
     }
 
     public List<NNode<T>> getChildren() {

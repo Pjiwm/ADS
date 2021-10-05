@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.LinkedList;
 
 import Polynomials.PolynomialFactory;
@@ -5,6 +6,7 @@ import Stacks.BracketDeLimiter;
 import Utils.AppUtils;
 import animal.*;
 import employee.*;
+import familytree.*;
 import linkedlist.CustomLinkedList;
 import miscellaneous.ArraySorter;
 import miscellaneous.MagicBox;
@@ -30,30 +32,35 @@ public class App {
         System.out.println(BracketDeLimiter.isBalanced("(())"));
         System.out.println(BracketDeLimiter.isBalanced("((())"));
         System.out.println(BracketDeLimiter.isBalanced("()))"));
-        AppUtils.line("Priority queue");
-        PriorityQueue queue = new PriorityQueue();
-        queue.add(new HTTPRequest(5, "request 1"));
-        queue.add(new HTTPRequest(8, "request 2"));
-        queue.add(new HTTPRequest(10, "request 3"));
-        queue.add(new HTTPRequest(8, "request 4"));
-        queue.add(new HTTPRequest(5, "request 5"));
-        queue.add(new HTTPRequest(1, "request 6"));
-        queue.add(new HTTPRequest(9, "request 7"));
-        queue.add(new HTTPRequest(8, "request 8"));
+        AppUtils.line("N-ary tree");
+        boolean dead = false;
+        boolean alive = true;
 
-        System.out.println(queue.toString());
-        AppUtils.line("Tree");
-        BTreeNode<Integer> root = new BTreeNode<>(6);
-        root.insert(4);
-        root.insert(5);
-        root.insert(12);
-        root.insert(9);
-        root.insert(13);
-        root.insert(24); 
-        System.out.println(root.contains(4));
-        System.out.println(root.contains(13));
-        System.out.println(root.contains(4000));
+        // youngest gen
+        Person bob = new Person("Bob Nuts", new Date(2019, 4, 20), alive, Gender.MALE);
+        Person kim = new Person("Kim Nuts", new Date(2021, 1, 4), alive, Gender.FEMALE);
+        NNode<Person> bobNode = new NNode<>(bob);
+        NNode<Person> KimNode = new NNode<>(kim);
 
+        // youngest parents
+        Person jeff = new Person("Jeff Nuts", new Date(1992, 10, 10), alive, Gender.MALE);
+        Person monica = new Person("Monica bruh", new Date(1994, 9, 20), alive, Gender.FEMALE);
+        NNode<Person> jeffsFam = new NNode<>(jeff);
+        jeffsFam.addPartner(monica);
+        jeffsFam.addKid(bobNode);
+        jeffsFam.addKid(KimNode);
+
+        // child of John without family
+        Person greg = new Person("Greg Nuts", new Date(1993, 3, 30), alive, Gender.MALE);
+        NNode<Person> gregNode = new NNode<>(greg);
+
+        // middle gen
+        Person john = new Person("John Nuts", new Date(1960, 7, 15), alive, Gender.MALE);
+        Person catherine = new Person("Catherine Williams",  new Date(1965, 5, 22), alive, Gender.FEMALE);
+        NNode<Person> johnsFem = new NNode<>(john);
+        johnsFem.addPartner(catherine);
+        johnsFem.addKid(jeffsFam);
+        johnsFem.addKid(gregNode);
 
 
     }
