@@ -37,4 +37,10 @@ public class BTreeNode<T extends Comparable<T>> {
         return false;
     }
 
+    public void callChildren() {
+        if(left != null) left.callChildren();
+        System.out.println(this.value);
+        if(right != null) right.callChildren();
+    }
+
 }
