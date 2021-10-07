@@ -41,6 +41,7 @@ public class App {
         tree.insert(7);
         tree.insert(9);
         System.out.println(tree);
+        System.out.println(tree.levelOrder());
 
 
 

@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class BTreeNode<T extends Comparable<T>> {
     private BTreeNode<T> left;
     private BTreeNode<T> right;
@@ -35,6 +40,21 @@ public class BTreeNode<T extends Comparable<T>> {
         }
 
         return false;
+    }
+
+    public String levelOrder() {
+        Queue<BTreeNode<T>> queue = new LinkedList<>();
+        queue.add(this);
+        StringBuilder sb = new StringBuilder();
+        while(queue.size() != 0) {
+           BTreeNode<T> current = queue.remove();
+           sb.append(current.value + " ");
+
+           if(current.left != null) queue.add(current.left);
+           if(current.right != null) queue.add(current.right);
+
+        }
+        return sb.toString();
     }
 
     private void callChildren(StringBuilder sb) {
