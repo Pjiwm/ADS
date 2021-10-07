@@ -1,1 +1,1 @@
-## Sandbox for the subject algorithm and data structures.
+## Sandbox for the subject algorithms and data structures.
