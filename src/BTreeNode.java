@@ -37,10 +37,18 @@ public class BTreeNode<T extends Comparable<T>> {
         return false;
     }
 
-    public void callChildren() {
-        if(left != null) left.callChildren();
-        System.out.println(this.value);
-        if(right != null) right.callChildren();
+    private void callChildren(StringBuilder sb) {
+
+        if (left != null)  left.callChildren(sb);
+        sb.append(value + " ");
+        if (right != null) right.callChildren(sb);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        callChildren(sb);
+        return sb.toString();
     }
 
 }

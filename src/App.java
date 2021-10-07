@@ -40,7 +40,7 @@ public class App {
         tree.insert(5);
         tree.insert(7);
         tree.insert(9);
-        tree.callChildren();
+        System.out.println(tree);
 
 
 
