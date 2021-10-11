@@ -7,4 +7,18 @@ public class Name {
         this.second = second;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || !(o instanceof Name)) {
+            return false;
+        }
+        Name name = (Name) o;
+        return name.first.equals(this.first) && name.second.equals(this.second);
+    }
+
+    @Override
+    public int hashCode() {
+        return first.hashCode() ^ second.hashCode();
+    }
+
 }

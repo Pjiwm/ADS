@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomHashMap<K, V> {
-    // private List<Entry> entries;
-    // Entry[] entries = (Entry[]) new Object[10];
     List<Entry> entries;
 
     class Entry {
@@ -18,19 +16,38 @@ public class CustomHashMap<K, V> {
     }
 
     public CustomHashMap() {
-        // this.entries = new ArrayList<>();
-        // entries = new Entry[];
-        this.entries = new ArrayList<>(10);
-        System.out.println(entries.get(0));
+        this.entries = new ArrayList<>(5);
+        int i = 0;
+        while (i < 5) {
+            entries.add(i, null);
+        }
     }
 
-    // public V get(K key) {
+    public V get(K key) {
+        int index = getIndex(key);
+        Entry current = entries.get(index);
+        while (current != null) {
+            if (current.key.equals(key)) {
+                return current.value;
+            } else {
+                current = current.next;
+            }
+        }
+        throw new IllegalStateException("Key does not exist.");
+    }
 
-    // }
+    public void put(K key, V value) {
+        int index = key.hashCode();
+        Entry newEntry = new Entry(key, value);
+        if (entries.get(index) == null) {
+            entries.add(index, newEntry);
+        } else {
+            newEntry.next = entries.get(index);
+            entries.add(index, newEntry);
+        }
+    }
 
-    // public void put(K key, V value) {
-    //     int index = key.hashCode();
-    //     if()
-    //     entries[index] = new Entry(key, value);
-    // }
+    private int getIndex(K key) {
+        return key.hashCode() % entries.size();
+    }
 }

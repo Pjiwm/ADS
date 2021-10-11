@@ -43,6 +43,14 @@ public class App {
         System.out.println(tree);
         System.out.println(tree.levelOrder());
         CustomHashMap<Name, Info> pb = new CustomHashMap<>();
-        // pb.put(new Name("john", "whick"), new Info("01", "0612345678", "s@gmail.com"));
+        pb.put(new Name("john", "whick"), new Info("01", "0612345678", "s@gmail.com"));
+        pb.put(new Name("john2", "whick"), new Info("01", "061254345678", "f@gmail.com"));
+        pb.put(new Name("john3", "whick"), new Info("01", "061254345678", "d@gmail.com"));
+        pb.put(new Name("john4", "whick"), new Info("01", "061254345678", "d@gmail.com"));
+        pb.put(new Name("john5", "whick"), new Info("01", "061235445678", "ee@gmail.com"));
+        pb.put(new Name("john6", "whick"), new Info("01", "0612345678", "s@gmail.com"));
+        pb.put(new Name("john7", "whick"), new Info("01", "0612345678", "sdd@gmail.com"));
+        pb.put(new Name("john8", "whick"), new Info("01", "0612445345678", "ws@gmail.com"));
+        pb.get(new Name("John 9", "whick"));
     }
 }
