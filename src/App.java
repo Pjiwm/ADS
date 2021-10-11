@@ -42,13 +42,7 @@ public class App {
         tree.insert(9);
         System.out.println(tree);
         System.out.println(tree.levelOrder());
-
-
-
-
-
-
-
-
+        CustomHashMap<Name, Info> pb = new CustomHashMap<>();
+        // pb.put(new Name("john", "whick"), new Info("01", "0612345678", "s@gmail.com"));
     }
 }

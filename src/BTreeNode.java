@@ -47,6 +47,7 @@ public class BTreeNode<T extends Comparable<T>> {
         queue.add(this);
         StringBuilder sb = new StringBuilder();
         while(queue.size() != 0) {
+            
            BTreeNode<T> current = queue.remove();
            sb.append(current.value + " ");
 
