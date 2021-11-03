@@ -19,38 +19,23 @@ public class App {
         int[] orderedArray = { 1, 4, 7, 11, 15, 20, 30, 44, 60, 90, 100, 104, 110 };
         int[] a = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
         int[] b = { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
-        AppUtils.line("Employee List");
-        EmployeeList<Employee> employeeList = new EmployeeList<>();
-        employeeList.add(new Employee("Bob", 2000));
-        employeeList.add(new Employee("Dick", 2500));
-        employeeList.add(new Employee("Hank", 4000));
-        employeeList.add(new Employee("Joe", 3000));
-        EmployeeList<Employee> employeeListCopy = employeeList.clone();
-        System.out.println(employeeListCopy.size());
-        System.out.println(employeeListCopy.get(0).toString() + " " + employeeList.get(0).toString());
-        AppUtils.line("BracketDeLimiter");
-        System.out.println(BracketDeLimiter.isBalanced("(())"));
-        System.out.println(BracketDeLimiter.isBalanced("((())"));
-        System.out.println(BracketDeLimiter.isBalanced("()))"));
-        AppUtils.line("search-ary tree");
-        BTreeNode<Integer> tree = new BTreeNode<>(6);
-        tree.insert(4);
-        tree.insert(8);
-        tree.insert(3);
-        tree.insert(5);
-        tree.insert(7);
-        tree.insert(9);
-        System.out.println(tree);
-        System.out.println(tree.levelOrder());
-        CustomHashMap<Name, Info> pb = new CustomHashMap<>();
-        pb.put(new Name("john", "whick"), new Info("01", "0612345678", "s@gmail.com"));
-        pb.put(new Name("john2", "whick"), new Info("01", "061254345678", "f@gmail.com"));
-        pb.put(new Name("john3", "whick"), new Info("01", "061254345678", "d@gmail.com"));
-        pb.put(new Name("john4", "whick"), new Info("01", "061254345678", "d@gmail.com"));
-        pb.put(new Name("john5", "whick"), new Info("01", "061235445678", "ee@gmail.com"));
-        pb.put(new Name("john6", "whick"), new Info("01", "0612345678", "s@gmail.com"));
-        pb.put(new Name("john7", "whick"), new Info("01", "0612345678", "sdd@gmail.com"));
-        pb.put(new Name("john8", "whick"), new Info("01", "0612445345678", "ws@gmail.com"));
-        pb.get(new Name("John 9", "whick"));
+        AppUtils.line("Test");
+        ListNode<String> head = new ListNode<String>(null, "first");
+        ListNode<String> second = new ListNode<String>(head, "second");
+        ListNode<String> third = new ListNode<String>(second, "third");
+        ListNode<String> fourth = new ListNode<String>(third, "fourth");
+        System.out.println(head); // first, second, third, fourth
+        ListNode<String> shallowCopy = head;
+        ListNode<String> deepCopy = (ListNode<String>) head.clone();
+
+        head.replaceAt(1, "replaced");
+        ListNode<String> fifth = new ListNode<String>(fourth, "fifth");
+        System.out.println(shallowCopy); // first, replaced, third, fourth, fifth 
+        System.out.println(deepCopy); //
+                                         // first, second, third, fourth
+
+        // GameNode root = new GameNode(5, true);
+        // System.out.println(root.countPlayerWins(true));
+        // System.out.println(root.countPlayerWins(false));
     }
 }

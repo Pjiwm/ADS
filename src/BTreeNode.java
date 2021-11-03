@@ -46,13 +46,15 @@ public class BTreeNode<T extends Comparable<T>> {
         Queue<BTreeNode<T>> queue = new LinkedList<>();
         queue.add(this);
         StringBuilder sb = new StringBuilder();
-        while(queue.size() != 0) {
-            
-           BTreeNode<T> current = queue.remove();
-           sb.append(current.value + " ");
+        while (queue.size() != 0) {
 
-           if(current.left != null) queue.add(current.left);
-           if(current.right != null) queue.add(current.right);
+            BTreeNode<T> current = queue.remove();
+            sb.append(current.value + " ");
+
+            if (current.left != null)
+                queue.add(current.left);
+            if (current.right != null)
+                queue.add(current.right);
 
         }
         return sb.toString();
@@ -60,9 +62,11 @@ public class BTreeNode<T extends Comparable<T>> {
 
     private void callChildren(StringBuilder sb) {
 
-        if (left != null)  left.callChildren(sb);
+        if (left != null)
+            left.callChildren(sb);
         sb.append(value + " ");
-        if (right != null) right.callChildren(sb);
+        if (right != null)
+            right.callChildren(sb);
     }
 
     @Override

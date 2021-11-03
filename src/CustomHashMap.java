@@ -48,6 +48,10 @@ public class CustomHashMap<K, V> {
     }
 
     private int getIndex(K key) {
-        return key.hashCode() % entries.size();
+        int hashCode = key.hashCode();
+        if(hashCode < 0) {
+            hashCode *= -1;
+        }
+        return hashCode % entries.size();
     }
 }
